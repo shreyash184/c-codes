@@ -37,9 +37,47 @@ void display(struct Node * root) {
 	}
 }
 
+struct Node * FindMax(struct Node * root) {
+	if(root->right!=NULL)
+		root=FindMax(root->right);
+	return(root);
+}
+
+struct Node * deletion(struct Node * root,int y) {
+	struct Node *temp;
+	if(root==NULL) 	{
+	cout<<"the tree is empty plz enter any element in the tree then try to delete any element";}
+	else if(y > root->Key) {
+		root->right = deletion(root->right,y);	
+	}
+	else if(y < root->Key) {
+		root->left=deletion(root->left,y);
+	}
+	else {
+		if(root->left==NULL) {
+			temp=root->right;
+			free(root);
+			return temp;
+		}
+		if(root->right==NULL) {	
+			temp=root->left;
+			free(root);	
+			return temp;
+		}
+		else if(root->left && root->right) {
+			temp = FindMax(root->left);
+			root->Key = temp->Key;
+			root->left = deletion(root->left, root->Key);
+		}
+
+	    }
+	return(root);
+}
+
 int main() {
 
-	int n, x;
+
+	int n, x,y;
 	cout<<"enter the number of elements in the tree : ";
 	cin>>n;
 	for(int i=0;i<n;i++) {	
@@ -48,6 +86,11 @@ int main() {
 		root = insert(root, x);
 		insert(root,x);
 	}
+display(root);
+	cout<<"enter thee element you want to delete : ";
+	cin>>y;
+
+ root = deletion(root, y);
 	display(root);
 	return 0;
 
