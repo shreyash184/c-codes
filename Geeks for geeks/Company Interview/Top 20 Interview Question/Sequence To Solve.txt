@@ -1,0 +1,22 @@
+Sequence
+
+1). LCS.
+2). Shortest SuperSubsequence.
+3). Longest increasing path in matrix.
+4). Edit Distance.
+5). Count number of ways to cover a distance.
+6). 0/1 KnapSack.
+7). Longest Increasing Subsequence.
+8). Partition Problem.
+9). Rod Cutting. 
+10). Maximum Product Cutting.
+11). Subset Sum Problem.
+12). Coin Chainging.
+13). Word Break Problem.
+14). Dice Throw Problem.
+15). Egg Dropping Puzzle.
+16). Matrix Chain multiplication.
+17). Minimum Partition.
+18). Optimal Strategy for a game.
+19). Boolean Parenthesization Problem.
+20). Box Stacking.
