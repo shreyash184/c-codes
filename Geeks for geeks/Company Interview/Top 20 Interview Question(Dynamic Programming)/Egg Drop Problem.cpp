@@ -56,6 +56,8 @@ int eggDrop(int n, int k){
     }
     return t[n][k];
 }
+
+//IT has One more efficient solution in O(nlogk) Time
 int main()
 {
     int n=2,k=10;
