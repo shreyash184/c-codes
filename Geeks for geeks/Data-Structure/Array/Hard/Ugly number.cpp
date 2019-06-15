@@ -7,17 +7,14 @@ int main()
     cin.tie(NULL);
 	int t;
 	cin>>t;
-	while(t--){
-	    unsigned int n;
-	    cin>>n;
-	        unsigned int next_2mul = 2;
-	        unsigned int next_3mul = 3;
-	        unsigned int next_5mul = 5;
-	        unsigned int arr[n];
-	        unsigned int i2=0,i3=0,i5=0;
+	        long long int next_2mul = 2;
+	        long long int next_3mul = 3;
+	        long long int next_5mul = 5;
+	        long long int arr[10001];
+	        long long int i2=0,i3=0,i5=0;
 	        arr[0] = 1;
-	    for(int i=1;i<n;i++){
-	        int next_ugly_no = min(next_2mul,min(next_3mul, next_5mul));
+	    for(long long int i=1;i<10001;i++){
+	        long long int next_ugly_no = min(next_2mul,min(next_3mul, next_5mul));
 	        
 	        arr[i] = next_ugly_no;
 	        if(next_ugly_no == next_2mul){
@@ -33,6 +30,9 @@ int main()
 	            next_5mul = arr[i5]*5;
 	        }
 	    }
+	while(t--){
+	    long long int n;
+	    cin>>n;
 	    cout<<arr[n-1]<<endl;
 	}
 	return 0;
