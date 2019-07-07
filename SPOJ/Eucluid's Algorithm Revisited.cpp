@@ -39,9 +39,11 @@ int main(){
     ll int t;
     cin>>t;
     while(t--){
-        ll int n,m;
-        cin>>n>>m;
-        cout<<(fib(m+2)-fib(n+1)+mod)%mod<<endl;
+        ll int n;
+        cin>>n;
+        if(n==0){cout<<0<<endl;}
+        else if(n==1){cout<<2<<endl;}
+        else cout<<fib(n+3)<<endl;
     }
     return 0;
 }
