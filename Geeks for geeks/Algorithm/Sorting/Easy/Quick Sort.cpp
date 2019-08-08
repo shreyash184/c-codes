@@ -35,3 +35,6 @@ int partition (int arr[], int low, int high)
         swap(arr[j], arr[low]);
    return j;
 }
+
+//Note : Their is also another method of quick sort which will help in Quick sort in linked list.
+//This is the Another Code for the Quick Sort.
